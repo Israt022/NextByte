@@ -18,8 +18,8 @@ export const serviceLinks = [
 ] as const;
 
 export const contactInfo = {
-    phone: "",
-    email: "",
+    phone: "+880 1XXXXXXXXX",
+    email: "info@nextbyteit.com",
 };
 
 export const socialLinks = [

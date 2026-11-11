@@ -36,7 +36,7 @@ const Logo = ({
                 fontFamily="Arial, sans-serif"
                 letterSpacing="-.6"
             >
-                NETBYTE
+                NEXTBYTE
             </text>
 
             <text
