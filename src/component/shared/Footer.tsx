@@ -168,7 +168,7 @@ const Footer = () => {
                 <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-text-secondary sm:flex-row">
                     <p className="text-center sm:text-left">
                         © {new Date().getFullYear()}{" "}
-                        <span className="font-semibold text-text-primary">Sawda Digital</span>. {t.rights}
+                        <span className="font-semibold text-text-primary">Next Byte IT</span>. {t.rights}
                     </p>
 
                     <div className="flex items-center gap-5">
