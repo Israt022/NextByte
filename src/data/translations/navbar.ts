@@ -1,0 +1,71 @@
+export const navbarEn = {
+    // Navigation
+    home: "Home",
+    services: "Services",
+    pricing: "Pricing",
+    projects: "Projects",
+    team: "Our Team",
+    contact: "Contact",
+
+    // Services dropdown
+    webDev: "Web Development",
+    appDev: "App Development",
+    uiux: "UI/UX Design",
+    itSupport: "IT Support & Networking",
+
+    // Pricing dropdown
+    websitePlans: "Website Packages",
+    appPlans: "App Packages",
+    maintenancePlans: "Maintenance Plans",
+
+    // Topbar
+    address: "Address, Bangladesh",
+    search: "Search",
+    quote: "Free Quote",
+    support: "Support",
+
+    // Controls
+    getStarted: "Get Started",
+    language: "Change language",
+    theme: "Change theme",
+    light: "Light",
+    dark: "Dark",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+};
+
+export const navbarBn = {
+    // Navigation
+    home: "হোম",
+    services: "সেবাসমূহ",
+    pricing: "প্রাইসিং",
+    projects: "প্রজেক্টস",
+    team: "আমাদের টিম",
+    contact: "যোগাযোগ",
+
+    // Services dropdown
+    webDev: "ওয়েব ডেভেলপমেন্ট",
+    appDev: "অ্যাপ ডেভেলপমেন্ট",
+    uiux: "ইউআই/ইউএক্স ডিজাইন",
+    itSupport: "আইটি সাপোর্ট ও নেটওয়ার্কিং",
+
+    // Pricing dropdown
+    websitePlans: "ওয়েবসাইট প্যাকেজ",
+    appPlans: "অ্যাপ প্যাকেজ",
+    maintenancePlans: "মেইনটেন্যান্স প্ল্যান",
+
+    // Topbar
+    address: "আপনার ঠিকানা, বাংলাদেশ",
+    search: "সার্চ",
+    quote: "ফ্রি কোটেশন",
+    support: "সাপোর্ট",
+
+    // Controls
+    getStarted: "শুরু করুন",
+    language: "ভাষা পরিবর্তন",
+    theme: "থিম পরিবর্তন",
+    light: "লাইট",
+    dark: "ডার্ক",
+    openMenu: "মেনু খুলুন",
+    closeMenu: "মেনু বন্ধ করুন",
+};
