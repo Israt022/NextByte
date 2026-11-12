@@ -10,13 +10,6 @@ import LanguageToggle from "./Languagetoggle";
 import ThemeToggle from "./Themetoggle";
 import Icon from "./Icon";
 import MobileMenu from "./Mobilemenu";
-// import Icon from "./Icon";
-// import NavItem from "../../data/Navitem";
-// import MobileMenu from "./MobileMenu";
-// import LanguageToggle from "./LanguageToggle";
-// import ThemeToggle from "./ThemeToggle";
-// import { useApp } from "@/context/AppProviders";
-// import { navItems } from "@/data/navigation";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +18,6 @@ const Navbar = () => {
     return (
         <nav className="theme-transition sticky top-0 z-50 border-b border-border bg-[var(--navbar-bg)] shadow-[var(--shadow)]">
             <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
-
                 <Link href="#home" aria-label="NextByte IT Home">
                     <Logo width={150} className="text-text-primary" />
                 </Link>
@@ -38,19 +30,20 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                <div className="flex items-center gap-2">
+                <div className="hidden items-center gap-2 xl:flex">
                     <LanguageToggle />
                     <ThemeToggle />
-                    <button
-                        type="button"
-                        onClick={() => setMenuOpen((open) => !open)}
-                        aria-label={menuOpen ? t.closeMenu : t.openMenu}
-                        aria-expanded={menuOpen}
-                        className="flex h-10 w-10 items-center justify-center rounded-md border border-border text-text-primary xl:hidden"
-                    >
-                        <Icon name={menuOpen ? "close" : "menu"} className="h-5 w-5" />
-                    </button>
                 </div>
+
+                <button
+                    type="button"
+                    onClick={() => setMenuOpen((open) => !open)}
+                    aria-label={menuOpen ? t.closeMenu : t.openMenu}
+                    aria-expanded={menuOpen}
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border text-text-primary xl:hidden"
+                >
+                    <Icon name={menuOpen ? "close" : "menu"} className="h-5 w-5" />
+                </button>
             </div>
 
             {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
