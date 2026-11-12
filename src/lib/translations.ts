@@ -71,17 +71,20 @@
 import { navbarEn, navbarBn } from "@/data/translations/navbar";
 import { footerEn, footerBn } from "@/data/translations/footer";
 import { heroBn, heroEn } from "@/data/translations/hero";
+import { servicesBn, servicesEn } from "@/data/translations/services";
 
 const en = {
     ...navbarEn,
     ...footerEn,
     ...heroEn,
+    ...servicesEn,
 };
 
 const bn = {
     ...navbarBn,
     ...footerBn,
     ...heroBn,
+    ...servicesBn,
 };
 
 export type Translations = typeof en;
