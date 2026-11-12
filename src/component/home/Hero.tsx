@@ -23,7 +23,11 @@ const Hero = () => {
                 className="pointer-events-none absolute inset-0 text-text-secondary opacity-25 [background-image:radial-gradient(currentColor_1.5px,transparent_1.5px)] [background-size:32px_32px]"
             />
 
-            <div className="relative mx-auto grid max-w-[1440px] items-center gap-20 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-12 lg:px-12 lg:py-24">
+            {/* <div className="relative mx-auto grid max-w-[1440px] items-center gap-20 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-12 lg:px-12 lg:py-24">
+                <HeroLeft show={show} />
+                <HeroRight show={show} />
+            </div> */}
+            <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-12 lg:px-12 lg:py-24">
                 <HeroLeft show={show} />
                 <HeroRight show={show} />
             </div>

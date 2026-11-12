@@ -29,7 +29,8 @@ const HeroRight = ({ show }: { show: boolean }) => {
                 show ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
             }`}
         >
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm sm:max-w-md">
+            {/* <div className="relative mx-auto aspect-[4/5] w-full max-w-sm sm:max-w-md"> */}
+            <div className="relative ml-auto aspect-[4/5] w-full max-w-sm sm:max-w-md lg:mr-0">
                 {/* Decorative shapes */}
                 <div className="absolute -right-6 -top-6 h-24 w-24 rotate-12 rounded-3xl bg-brand/20" />
                 <div className="absolute -right-10 bottom-1/4 h-14 w-14 rounded-full bg-text-secondary/30" />
