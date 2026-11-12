@@ -70,18 +70,18 @@
 // export const translations = { en, bn };
 import { navbarEn, navbarBn } from "@/data/translations/navbar";
 import { footerEn, footerBn } from "@/data/translations/footer";
-// import { homeEn, homeBn } from "@/data/translations/home";
+import { heroBn, heroEn } from "@/data/translations/hero";
 
 const en = {
     ...navbarEn,
     ...footerEn,
-    // ...homeEn,
+    ...heroEn,
 };
 
 const bn = {
     ...navbarBn,
     ...footerBn,
-    // ...homeBn,
+    ...heroBn,
 };
 
 export type Translations = typeof en;
