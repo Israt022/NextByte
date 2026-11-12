@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className="theme-transition sticky top-0 z-50 border-b border-border bg-[var(--navbar-bg)] shadow-[var(--shadow)]">
             <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
 
-                <Link href="#home" aria-label="NetByte IT Home">
+                <Link href="#home" aria-label="NextByte IT Home">
                     <Logo width={150} className="text-text-primary" />
                 </Link>
 

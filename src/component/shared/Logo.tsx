@@ -15,7 +15,7 @@ const Logo = ({
             className={className}
             fill="none"
             role="img"
-            aria-label="NetByte IT"
+            aria-label="NextByte IT"
         >
             <g
                 stroke="#B6FB44"

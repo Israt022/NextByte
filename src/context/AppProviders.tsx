@@ -22,8 +22,8 @@ interface AppContextType {
     toggleLanguage: () => void;
 }
 
-const THEME_KEY = "netbyte-theme";
-const LANGUAGE_KEY = "netbyte-language";
+const THEME_KEY = "nextbyte-theme";
+const LANGUAGE_KEY = "nextbyte-language";
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 

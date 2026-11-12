@@ -2,7 +2,7 @@
 export const footerEn = {
     // Footer description
     footerDesc:
-        "NetByte IT delivers modern digital solutions to help businesses grow and succeed in the digital world.",
+        "NextByte IT delivers modern digital solutions to help businesses grow and succeed in the digital world.",
 
     // Footer headings
     footerCompany: "Company",
@@ -39,7 +39,7 @@ export const footerEn = {
 export const footerBn: typeof footerEn = {
     // Footer description
     footerDesc:
-        "NetByte IT ব্যবসার উন্নয়ন ও ডিজিটাল জগতে সফলতার জন্য আধুনিক ডিজিটাল সলিউশন প্রদান করে।",
+        "NextByte IT ব্যবসার উন্নয়ন ও ডিজিটাল জগতে সফলতার জন্য আধুনিক ডিজিটাল সলিউশন প্রদান করে।",
 
     // Footer headings
     footerCompany: "কোম্পানি",
