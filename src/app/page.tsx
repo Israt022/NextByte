@@ -1,4 +1,5 @@
 import Hero from "@/component/home/Hero";
+import Process from "@/component/home/Process";
 import Services from "@/component/home/Services";
 import Image from "next/image";
 
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Services/>
+      <Process/>
     </div>
   );
 }

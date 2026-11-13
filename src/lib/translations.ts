@@ -72,12 +72,14 @@ import { navbarEn, navbarBn } from "@/data/translations/navbar";
 import { footerEn, footerBn } from "@/data/translations/footer";
 import { heroBn, heroEn } from "@/data/translations/hero";
 import { servicesBn, servicesEn } from "@/data/translations/services";
+import { processBn, processEn } from "@/data/translations/process";
 
 const en = {
     ...navbarEn,
     ...footerEn,
     ...heroEn,
     ...servicesEn,
+    ...processEn,
 };
 
 const bn = {
@@ -85,6 +87,7 @@ const bn = {
     ...footerBn,
     ...heroBn,
     ...servicesBn,
+    ...processBn,
 };
 
 export type Translations = typeof en;
