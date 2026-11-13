@@ -2,6 +2,7 @@ import Advantage from "@/component/home/Advantage";
 import Hero from "@/component/home/Hero";
 import Industries from "@/component/home/Industries";
 import Process from "@/component/home/Process";
+import Projects from "@/component/home/Projects";
 import Services from "@/component/home/Services";
 import Image from "next/image";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Process/>
       <Advantage/>
       <Industries />
+      <Projects />
     </div>
   );
 }
