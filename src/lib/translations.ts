@@ -76,6 +76,7 @@ import { processBn, processEn } from "@/data/translations/process";
 import { advantageBn, advantageEn } from "@/data/translations/advantage";
 import { industriesBn, industriesEn } from "@/data/translations/industries";
 import { projectsBn, projectsEn } from "@/data/translations/projects";
+import { teamBn, teamEn } from "@/data/translations/team";
 
 const en = {
     ...navbarEn,
@@ -86,6 +87,7 @@ const en = {
     ...advantageEn,
     ...industriesEn,
     ...projectsEn,
+    ...teamEn,
 };
 
 const bn = {
@@ -97,6 +99,7 @@ const bn = {
     ...advantageBn,
     ...industriesBn,
     ...projectsBn,
+    ...teamBn,
 };
 
 export type Translations = typeof en;
