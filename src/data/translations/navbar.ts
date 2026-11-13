@@ -55,7 +55,7 @@ export const navbarBn = {
     maintenancePlans: "মেইনটেন্যান্স প্ল্যান",
 
     // Topbar
-    address: "আপনার ঠিকানা, বাংলাদেশ",
+    address: "ঠিকানা, বাংলাদেশ",
     search: "সার্চ",
     quote: "ফ্রি কোটেশন",
     support: "সাপোর্ট",
