@@ -77,6 +77,7 @@ import { advantageBn, advantageEn } from "@/data/translations/advantage";
 import { industriesBn, industriesEn } from "@/data/translations/industries";
 import { projectsBn, projectsEn } from "@/data/translations/projects";
 import { teamBn, teamEn } from "@/data/translations/team";
+import { testimonialsBn, testimonialsEn } from "@/data/translations/testimonials";
 
 const en = {
     ...navbarEn,
@@ -88,6 +89,7 @@ const en = {
     ...industriesEn,
     ...projectsEn,
     ...teamEn,
+    ...testimonialsEn,
 };
 
 const bn = {
@@ -100,6 +102,7 @@ const bn = {
     ...industriesBn,
     ...projectsBn,
     ...teamBn,
+    ...testimonialsBn,
 };
 
 export type Translations = typeof en;

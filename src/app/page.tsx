@@ -5,6 +5,7 @@ import Process from "@/component/home/Process";
 import Projects from "@/component/home/Projects";
 import Services from "@/component/home/Services";
 import Team from "@/component/home/Team";
+import Testimonials from "@/component/home/Testimonials";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Industries />
       <Projects />
       <Team />
+      <Testimonials />
     </div>
   );
 }
