@@ -80,6 +80,7 @@ import { teamBn, teamEn } from "@/data/translations/team";
 import { testimonialsBn, testimonialsEn } from "@/data/translations/testimonials";
 import { faqBn, faqEn } from "@/data/translations/faq";
 import { notFoundBn, notFoundEn } from "@/data/translations/notfound";
+import { loadingEn, loadingBn } from "@/data/translations/loading";
 
 const en = {
     ...navbarEn,
@@ -94,6 +95,7 @@ const en = {
     ...testimonialsEn,
     ...faqEn,
     ...notFoundEn,
+    ...loadingEn,
 };
 
 const bn = {
@@ -109,6 +111,7 @@ const bn = {
     ...testimonialsBn,
     ...faqBn,
     ...notFoundBn,
+    ...loadingBn,
 };
 
 export type Translations = typeof en;
