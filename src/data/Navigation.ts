@@ -11,10 +11,10 @@ export interface NavItemData extends NavLinkData {
 
 // Child hrefs are placeholder routes — point them at your real pages.
 export const navItems: NavItemData[] = [
-    { key: "home", href: "#home" },
+    { key: "home", href: "/" },
     {
         key: "services",
-        href: "#services",
+        href: "",
         children: [
             { key: "webDev", href: "/services/web-development" },
             { key: "appDev", href: "/services/app-development" },
@@ -24,19 +24,19 @@ export const navItems: NavItemData[] = [
     },
     {
         key: "pricing",
-        href: "#pricing",
+        href: "",
         children: [
             { key: "websitePlans", href: "/pricing/website" },
             { key: "appPlans", href: "/pricing/app" },
             { key: "maintenancePlans", href: "/pricing/maintenance" },
         ],
     },
-    { key: "projects", href: "#portfolio" },
-    { key: "team", href: "#team" },
-    { key: "contact", href: "#contact" },
+    { key: "projects", href: "/projects" },
+    { key: "team", href: "/team" },
+    { key: "contact", href: "/contact" },
 ];
 
 export const topbarLinks: NavLinkData[] = [
-    { key: "quote", href: "#contact" },
-    { key: "support", href: "#contact" },
+    { key: "quote", href: "/contact" },
+    { key: "support", href: "/contact" },
 ];
