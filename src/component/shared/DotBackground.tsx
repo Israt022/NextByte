@@ -15,7 +15,7 @@ const DotBackground = ({
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 text-text-secondary opacity-25 [background-image:radial-gradient(currentColor_1.5px,transparent_1.5px)] [background-size:32px_32px]"
         />
-        <div className="relative">{children}</div>
+        <div className="relative pb-9">{children}</div>
     </div>
 );
 
