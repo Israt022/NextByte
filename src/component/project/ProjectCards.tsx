@@ -9,14 +9,18 @@ import ProjectCard from "./ProjectCard";
 import DotBackground from "@/component/shared/DotBackground";
 
 const spanClass = (index: number, total: number) => {
+    if (total === 1) return "lg:col-span-2";
+    if (total === 2) return "lg:col-span-2";
+
     const rest = total % 3;
 
     if (rest && index >= total - rest) {
-        return rest === 1 ? "lg:col-span-6" : "lg:col-span-3";
+        return "lg:col-span-3";
     }
 
     return "lg:col-span-2";
 };
+
 
 const ProjectCards = () => {
     const { t } = useApp();
@@ -70,25 +74,27 @@ const ProjectCards = () => {
             </DotBackground>
 
             {/* Project cards - outside dotted background */}
-            <div className="mx-auto mt-6 grid w-full max-w-[1440px] grid-cols-1 gap-6 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-6 lg:px-12">                <AnimatePresence mode="popLayout">
-                {visible.map((project, index) => (
-                    <motion.div
-                        key={project.alt}
-                        layout
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        transition={{
-                            duration: 0.45,
-                            delay: index * 0.06,
-                            ease: "easeOut",
-                        }}
-                        className={spanClass(index, visible.length)}
-                    >
-                        <ProjectCard project={project} />
-                    </motion.div>
-                ))}
-            </AnimatePresence>
+            <div className="mx-auto mt-6 grid w-full max-w-[1440px] grid-cols-1 gap-6 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-6 lg:px-12">
+
+                <AnimatePresence mode="popLayout">
+                    {visible.map((project, index) => (
+                        <motion.div
+                            key={project.alt}
+                            layout
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{
+                                duration: 0.45,
+                                delay: index * 0.06,
+                                ease: "easeOut",
+                            }}
+                            className={spanClass(index, visible.length)}
+                        >
+                            <ProjectCard project={project} />
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
             </div>
         </section>
     );
