@@ -11,14 +11,13 @@ export interface TestimonialData {
     rating: number;
 }
 
-// Put the avatars in /public/images/testimonials/ and replace the sample names with real clients
 export const testimonials: TestimonialData[] = [
     {
         name: "David Mitchell",
         role: "tstRole1",
         category: "tstCatMedia",
         quote: "tstQuote1",
-        image: "/images/testimonials/david.jpg",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
         rating: 5,
     },
     {
@@ -26,7 +25,7 @@ export const testimonials: TestimonialData[] = [
         role: "tstRole2",
         category: "tstCatWeb",
         quote: "tstQuote2",
-        image: "/images/testimonials/sarah.jpg",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
         rating: 5,
     },
     {
@@ -34,7 +33,7 @@ export const testimonials: TestimonialData[] = [
         role: "tstRole3",
         category: "tstCatEcom",
         quote: "tstQuote3",
-        image: "/images/testimonials/tanvir.jpg",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
         rating: 5,
     },
 ];

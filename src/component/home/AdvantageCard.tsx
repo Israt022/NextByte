@@ -3,25 +3,45 @@
 import { useApp } from "@/context/AppProviders";
 import type { AdvantageData } from "@/data/advantage";
 
-const AdvantageCard = ({ item }: { item: AdvantageData }) => {
-    const { t } = useApp();
+interface AdvantageCardProps {
+    item: AdvantageData;
+    index: number;
+}
+
+const AdvantageCard = ({ item, index }: AdvantageCardProps) => {
+    const { t, language } = useApp();
     const ItemIcon = item.icon;
 
+    const formattedIndex = (index + 1).toLocaleString(
+        language === "bn" ? "bn-BD" : "en-US",
+        { minimumIntegerDigits: 2 }
+    );
+
     return (
-        <article className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-7 transition duration-300 hover:-translate-y-1 hover:border-[#B6FB44]/30 hover:bg-white/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
-            <span
-                className={`flex h-14 w-14 items-center justify-center rounded-xl bg-[#B6FB44]/10 text-[#B6FB44] ${item.iconColor}`}
-            >
-                <ItemIcon size={22} />
-            </span>
+        <article className="group theme-transition relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-all duration-300 hover:border-[#B6FB44]/40 hover:bg-white/[0.07] sm:p-7">
+            <div>
+                {/* Header: Number and Icon */}
+                <div className="flex items-center justify-between">
+                    <span className="text-sm font-bold text-[#B6FB44]/70 group-hover:text-[#B6FB44]">
+                        {formattedIndex}
+                    </span>
+                    <div
+                        className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#B6FB44] transition-all group-hover:border-[#B6FB44]/30 group-hover:bg-[#B6FB44]/10"
+                    >
+                        <ItemIcon size={18} />
+                    </div>
+                </div>
 
-            <h3 className="mt-6 text-xl font-bold leading-snug text-white transition-colors group-hover:text-[#B6FB44]">
-                {t[item.title]}
-            </h3>
+                {/* Title */}
+                <h3 className="mt-5 text-lg font-bold leading-snug text-white transition-colors group-hover:text-[#B6FB44]">
+                    {t[item.title]}
+                </h3>
 
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                {t[item.desc]}
-            </p>
+                {/* Description */}
+                <p className="mt-2.5 text-xs leading-relaxed text-slate-300 sm:text-sm">
+                    {t[item.desc]}
+                </p>
+            </div>
         </article>
     );
 };

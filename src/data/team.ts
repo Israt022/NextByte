@@ -12,19 +12,17 @@ export interface TeamMember {
     image: string;
     linkedin: string;
     x: string;
-    // Accent classes (full strings so Tailwind can detect them)
     badge: string;
     tint: string;
 }
 
-// Put the photos in /public/images/team/ and point the social links at the real profiles
 export const team: TeamMember[] = [
     {
         name: "Md Khairul Bashar",
         category: "teamCatExec",
         role: "teamRoleCeo",
         icon: "crown",
-        image: "/images/team/khairul.jpg",
+        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
         linkedin: "https://linkedin.com",
         x: "https://x.com",
         badge: "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400",
@@ -35,7 +33,7 @@ export const team: TeamMember[] = [
         category: "teamCatWeb",
         role: "teamRoleAi",
         icon: "laptop",
-        image: "/images/team/junayed.jpg",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
         linkedin: "https://linkedin.com",
         x: "https://x.com",
         badge: "border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-400",
@@ -46,7 +44,7 @@ export const team: TeamMember[] = [
         category: "teamCatMarket",
         role: "teamRoleStrategy",
         icon: "chart",
-        image: "/images/team/reza.jpg",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
         linkedin: "https://linkedin.com",
         x: "https://x.com",
         badge: "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
@@ -57,7 +55,7 @@ export const team: TeamMember[] = [
         category: "teamCatWix",
         role: "teamRoleWix",
         icon: "bag",
-        image: "/images/team/marjan.jpg",
+        image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80",
         linkedin: "https://linkedin.com",
         x: "https://x.com",
         badge: "border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400",

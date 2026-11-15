@@ -9,9 +9,23 @@ export interface ProjectData {
     href: string;
 }
 
-// Put the images in /public/images/projects/ and point the hrefs at your real pages
 export const projects: ProjectData[] = [
-    { title: "prjAnalyticsTitle", desc: "prjAnalyticsDesc", image: "/images/projects/analytics.jpg", href: "/projects/analytics-dashboard" },
-    { title: "prjEcomTitle", desc: "prjEcomDesc", image: "/images/projects/ecommerce.jpg", href: "/projects/ecommerce-platform" },
-    { title: "prjSchoolTitle", desc: "prjSchoolDesc", image: "/images/projects/school.jpg", href: "/projects/school-management" },
+    {
+        title: "prjAnalyticsTitle",
+        desc: "prjAnalyticsDesc",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        href: "/projects/analytics-dashboard"
+    },
+    {
+        title: "prjEcomTitle",
+        desc: "prjEcomDesc",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+        href: "/projects/ecommerce-platform"
+    },
+    {
+        title: "prjSchoolTitle",
+        desc: "prjSchoolDesc",
+        image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80",
+        href: "/projects/school-management"
+    },
 ];
