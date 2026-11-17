@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextByte IT — Digital Solutions & Technology Platform
 
-## Getting Started
+A modern, high-performance web platform built for **NextByte IT**, a forward-thinking digital agency and IT services company specializing in web engineering, media production, branding, enterprise cloud solutions, and digital growth.
 
 First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="left">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Key Points
 
-## Learn More
+* **Bilingual Translation System:** Instant language switching between English and Bangla (`en` / `bn`) powered by clean context-driven localization.
+* **Dual Theme Engine:** Seamless light and dark mode support with instant transitions and persistent user preference.
+* **Mobile-First Responsive Design:** Purposefully engineered layouts tailored for smartphones, tablets, laptops, and ultra-wide displays.
+* **Modern Agency Aesthetics:** High-end visual hierarchy with bento layouts, subtle ambient glows, and clean typography.
+* **Clean & Modular Codebase:** Separated data models, centralized translation files, and reusable UI components.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Interactive Hero Showcase:** Dynamic agency introduction with crossfade visual showcases, live status badges, and quick service links.
+* **Comprehensive Service Suite:** Curated service presentations across Web & CMS, Media, Social Marketing, Branding, SEO, and E-commerce.
+* **Engineering Process Roadmap:** 5-step milestone workflow illustrating end-to-end project execution from discovery to deployment.
+* **Filterable Work Portfolio:** Categorized project showcase with animated filter tabs and deep-dive case study presentations.
+* **Interactive Team & Pricing:** Executive leadership roster paired with a dynamic package selector and custom add-on cost estimator.
+* **Direct Lead Generation:** Integrated contact hub with direct WhatsApp integration, email channels, and structured inquiry forms.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Conclusion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**NextByte IT** delivers a fast, accessible, and visually captivating web presence that reflects the precision, reliability, and innovation of a modern IT solutions provider. Built with scalable modern web standards, it serves as a robust digital flagship ready to drive client engagement and measurable business growth.
