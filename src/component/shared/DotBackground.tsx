@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
-// Shared page background: theme-aware surface with subtle ambient glow and delicate dot grid
-// Wraps inner pages (Projects, Contact, Team, etc.) to give a cohesive, modern tech feel.
+// Shared page background: plain, modern, and professional architectural backdrop.
+// Wraps inner pages (Projects, Contact, Team, etc.) with a clean structural aesthetic.
 interface DotBackgroundProps {
     children: ReactNode;
     className?: string;
@@ -12,20 +12,32 @@ const DotBackground = ({
     className = "",
 }: DotBackgroundProps) => (
     <div className={`theme-transition relative min-h-screen overflow-hidden bg-background ${className}`}>
-        {/* Subtle Ambient Brand Glow at Top */}
+        {/* Subtle Top Gradient Wash */}
         <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-brand/10 blur-[130px] dark:bg-brand/5"
+            className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-gradient-to-b from-surface-secondary/70 via-surface-secondary/25 to-transparent"
         />
 
-        {/* Refined Dot Pattern that fades out downward */}
+        {/* Soft Ambient Brand Center Sheen */}
         <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-[650px] text-text-secondary opacity-[0.15] [background-image:radial-gradient(currentColor_1.5px,transparent_1.5px)] [background-size:28px_28px] [mask-image:linear-gradient(to_bottom,black_40%,transparent)]"
+            className="pointer-events-none absolute -top-40 left-1/2 h-[360px] w-[720px] -translate-x-1/2 rounded-full bg-brand/[0.04] blur-[110px] dark:bg-brand/[0.03]"
+        />
+
+        {/* Minimal Architectural Hairline Grid with Radial Fade */}
+        <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-[620px] text-text-primary opacity-[0.03] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black_50%,transparent_100%)] dark:opacity-[0.045]"
+        />
+
+        {/* Top Horizon Hairline Accent */}
+        <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
         />
 
         {/* Page Content */}
-        <div className="relative">{children}</div>
+        <div className="relative z-10">{children}</div>
     </div>
 );
 
