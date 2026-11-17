@@ -34,22 +34,28 @@ const TeamAddons = () => {
                 <SectionHeading tag={t.addonTag} title={t.addonTitle} desc={t.addonDesc} />
 
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 35 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="mt-14 rounded-[2.5rem] border border-border bg-surface-secondary p-6 sm:p-10"
+                    transition={{ duration: 0.65, ease: "easeOut" }}
+                    className="mt-14 rounded-3xl border border-border bg-surface p-6 shadow-sm sm:p-10 lg:p-12"
                 >
-                    {/* Base package */}
-                    <label className="flex flex-wrap items-center justify-between gap-4">
-                        <span className="text-sm font-bold uppercase tracking-wider text-text-secondary">
-                            {t.addonBase}
-                        </span>
-                        <span className="relative block w-full sm:w-96">
+                    {/* Base package dropdown */}
+                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/80 pb-8">
+                        <div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-text-secondary">
+                                {t.addonBase}
+                            </span>
+                            <h3 className="mt-1 text-lg font-bold text-text-primary">
+                                Select Your Foundation Package
+                            </h3>
+                        </div>
+
+                        <div className="relative w-full sm:w-96">
                             <select
                                 value={base.id}
                                 onChange={(e) => setBaseId(e.target.value)}
-                                className="w-full appearance-none rounded-2xl border border-border bg-surface px-5 py-3.5 pr-12 text-sm font-semibold text-text-primary outline-none transition-colors focus:border-brand"
+                                className="w-full appearance-none rounded-2xl border border-border bg-surface-secondary px-5 py-3.5 pr-12 text-sm font-semibold text-text-primary outline-none transition-all focus:border-brand focus:ring-2 focus:ring-brand/20"
                             >
                                 {pricing.flatMap((m) => m.subs).map((sub) => (
                                     <optgroup key={sub.id} label={t[sub.title]}>
@@ -65,79 +71,84 @@ const TeamAddons = () => {
                                 size={12}
                                 className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-text-secondary"
                             />
-                        </span>
-                    </label>
+                        </div>
+                    </div>
 
-                    {/* Add-on checkboxes */}
-                    <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {addons.map((addon) => {
-                            const on = checked.includes(addon.id);
-                            return (
-                                <li key={addon.id}>
-                                    <label
-                                        className={`flex h-full cursor-pointer items-start gap-4 rounded-2xl border p-5 transition-colors ${
-                                            on
-                                                ? "border-brand bg-brand/10"
-                                                : "border-border bg-surface hover:border-brand/40"
-                                        }`}
-                                    >
-                                        <input
-                                            type="checkbox"
-                                            checked={on}
-                                            onChange={() => toggle(addon.id)}
-                                            className="peer sr-only"
-                                        />
-                                        <span
-                                            className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border text-brand-foreground peer-focus-visible:ring-2 peer-focus-visible:ring-brand ${
-                                                on ? "border-brand bg-brand" : "border-border bg-surface-secondary"
+                    {/* Add-on selection list */}
+                    <div className="mt-8">
+                        <p className="text-xs font-bold uppercase tracking-wider text-text-secondary">
+                            Optional Add-on Capabilities
+                        </p>
+                        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                            {addons.map((addon) => {
+                                const on = checked.includes(addon.id);
+                                return (
+                                    <li key={addon.id}>
+                                        <label
+                                            className={`flex h-full cursor-pointer items-start gap-3.5 rounded-2xl border p-5 transition-all ${
+                                                on
+                                                    ? "border-brand bg-brand/10 shadow-sm"
+                                                    : "border-border bg-surface-secondary hover:border-brand/40 hover:bg-surface"
                                             }`}
                                         >
-                                            {on && <FaCheck size={11} />}
-                                        </span>
-                                        <span>
-                                            <span className="block font-bold leading-snug text-text-primary">
-                                                {t[addon.title]}
+                                            <input
+                                                type="checkbox"
+                                                checked={on}
+                                                onChange={() => toggle(addon.id)}
+                                                className="peer sr-only"
+                                            />
+                                            <span
+                                                className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border text-brand-foreground transition-colors ${
+                                                    on ? "border-brand bg-brand" : "border-border bg-surface"
+                                                }`}
+                                            >
+                                                {on && <FaCheck size={10} />}
                                             </span>
-                                            <span className="mt-2 block text-sm font-bold text-brand">
-                                                + {formatPrice(addon.price, language)}
+                                            <span className="flex-1">
+                                                <span className="block font-bold leading-snug text-text-primary">
+                                                    {t[addon.title]}
+                                                </span>
+                                                <span className="mt-1.5 block text-xs font-bold text-brand">
+                                                    + {formatPrice(addon.price, language)}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </label>
-                                </li>
-                            );
-                        })}
-                    </ul>
+                                        </label>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
 
-                    {/* Live total */}
-                    <div className="mt-8 flex flex-col gap-6 rounded-3xl bg-slate-900 p-6 text-white shadow-xl sm:p-8 lg:flex-row lg:items-center lg:justify-between">
-                        <div className="flex items-center gap-5">
-                            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand/25 text-pink-300">
-                                <FaStar size={20} />
+                    {/* Live Total & Checkout Bar */}
+                    <div className="mt-10 flex flex-col gap-6 rounded-3xl bg-slate-900 p-6 text-white shadow-xl sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+                        <div className="flex items-center gap-4">
+                            <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-[#B6FB44]/15 text-[#B6FB44]">
+                                <FaStar size={18} />
                             </span>
                             <div>
-                                <p className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                                     {t.addonTotal}
                                 </p>
-                                <p className="text-4xl font-extrabold" aria-live="polite">
+                                <p className="text-3xl font-black text-white sm:text-4xl" aria-live="polite">
                                     {formatPrice(total, language)}
                                 </p>
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex flex-wrap items-center gap-3">
                             <a
                                 href={whatsappLink(waText)}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-2xl bg-green-500 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-green-600"
+                                className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-500/20 transition-all hover:bg-emerald-600 hover:scale-[1.02] active:scale-[0.98]"
                             >
-                                <FaWhatsapp size={18} /> {t.addonBook}
+                                <FaWhatsapp size={16} /> <span>{t.addonBook}</span>
                             </a>
                             <Link
                                 href="/contact"
-                                className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/20"
+                                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
                             >
-                                {t.addonQuote} <FaArrowRight size={12} />
+                                <span>{t.addonQuote}</span> <FaArrowRight size={11} />
                             </Link>
                         </div>
                     </div>

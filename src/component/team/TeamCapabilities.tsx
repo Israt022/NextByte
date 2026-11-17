@@ -4,9 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import { useApp } from "@/context/AppProviders";
-// import { capabilities } from "@/data/team";
+import { capabilities } from "@/data/team";
 import SectionHeading from "./SectionHeading";
-import { capabilities } from "@/data/expertiesTeam";
 
 const TeamCapabilities = () => {
     const { t } = useApp();
@@ -23,29 +22,34 @@ const TeamCapabilities = () => {
                     {capabilities.map(({ title, desc, icon: CapIcon, href }, index) => (
                         <motion.div
                             key={title}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.15 }}
-                            transition={{ duration: 0.6, delay: (index % 4) * 0.1, ease: "easeOut" }}
+                            transition={{ duration: 0.55, delay: (index % 4) * 0.08, ease: "easeOut" }}
                         >
-                            <article className="group flex h-full flex-col rounded-3xl border border-border bg-surface p-7 transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0">
-                                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-brand-foreground">
-                                    <CapIcon size={22} />
-                                </span>
+                            <article className="group theme-transition flex h-full flex-col justify-between rounded-3xl border border-border bg-surface p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
+                                <div>
+                                    <span className="flex h-13 w-13 items-center justify-center rounded-2xl border border-border bg-surface-secondary text-brand transition-all group-hover:border-brand/40 group-hover:bg-brand/10">
+                                        <CapIcon size={20} />
+                                    </span>
 
-                                <h3 className="mt-6 text-lg font-bold leading-snug text-text-primary">
-                                    {t[title]}
-                                </h3>
-                                <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
-                                    {t[desc]}
-                                </p>
+                                    <h3 className="mt-6 text-lg font-bold leading-snug text-text-primary transition-colors group-hover:text-brand">
+                                        {t[title]}
+                                    </h3>
+                                    <p className="mt-2.5 text-xs leading-relaxed text-text-secondary sm:text-sm">
+                                        {t[desc]}
+                                    </p>
+                                </div>
 
-                                <Link
-                                    href={href}
-                                    className="mt-6 flex items-center gap-2 border-t border-border pt-5 text-sm font-semibold text-brand transition-all group-hover:gap-3"
-                                >
-                                    {t.capCta} <FaArrowRight size={12} />
-                                </Link>
+                                <div className="mt-6 border-t border-border/80 pt-4">
+                                    <Link
+                                        href={href}
+                                        className="inline-flex items-center gap-2 text-xs font-bold text-text-primary transition-all group-hover:text-brand"
+                                    >
+                                        <span>{t.capCta}</span>
+                                        <FaArrowRight size={11} className="text-brand transition-transform group-hover:translate-x-1" />
+                                    </Link>
+                                </div>
                             </article>
                         </motion.div>
                     ))}

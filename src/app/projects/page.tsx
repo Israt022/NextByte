@@ -1,4 +1,3 @@
-
 import ProjectCards from "@/component/project/ProjectCards";
 import ProjectFeatured from "@/component/project/ProjectFeatured";
 import ProjectHeading from "@/component/project/ProjectHeading";
@@ -6,18 +5,17 @@ import DotBackground from "@/component/shared/DotBackground";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Projects | NetByte IT",
+    title: "Projects | NextByte IT",
 };
 
 const ProjectPage = () => (
-    <main>
-        <DotBackground>
+    <DotBackground>
+        <main>
             <ProjectHeading />
-        </DotBackground>
             <ProjectCards />
-
-        <ProjectFeatured />
-    </main>
+            <ProjectFeatured />
+        </main>
+    </DotBackground>
 );
 
 export default ProjectPage;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { FaChevronDown, FaPaperPlane } from "react-icons/fa6";
+import { FaChevronDown, FaPaperPlane, FaCircleCheck, FaTriangleExclamation } from "react-icons/fa6";
 import { useApp } from "@/context/AppProviders";
 import { formFields, serviceOptions } from "@/data/contact";
 import { contactInfo } from "@/data/footer";
@@ -9,12 +9,11 @@ import { translations, type Translations } from "@/lib/translations";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-// Set in .env.local, e.g. a Formspree URL: https://formspree.io/f/xxxxxxxx
 const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT;
 
 const labelClass = "mb-2 block text-xs font-bold uppercase tracking-wider text-text-primary";
 const fieldClass =
-    "w-full rounded-2xl border border-border bg-surface-hover px-5 py-4 text-sm text-text-primary outline-none transition-colors placeholder:text-text-secondary focus:border-brand";
+    "w-full rounded-2xl border border-border bg-surface-secondary px-5 py-4 text-sm text-text-primary outline-none transition-all placeholder:text-text-secondary/70 focus:border-brand focus:bg-surface focus:ring-2 focus:ring-brand/20";
 
 const ContactForm = () => {
     const { t } = useApp();
@@ -24,10 +23,8 @@ const ContactForm = () => {
         e.preventDefault();
         const form = e.currentTarget;
         const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
-        // Always send the service name in English so you can read it whatever language was used
         data.service = translations.en[data.service as keyof Translations] ?? data.service;
 
-        // No endpoint configured yet: fall back to the visitor's mail app
         if (!endpoint) {
             const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join("\n");
             window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
@@ -54,17 +51,23 @@ const ContactForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="rounded-[2rem] border border-border bg-surface-secondary p-8 sm:p-12"
+            className="rounded-3xl border border-border bg-surface p-8 shadow-sm sm:p-10 lg:p-12"
         >
-            <h2 className="text-3xl font-extrabold tracking-tight text-text-primary">
-                {t.contactFormTitle}
-            </h2>
-            <p className="mt-3 text-text-secondary">{t.contactFormDesc}</p>
+            <div>
+                <h2 className="text-2xl font-black tracking-tight text-text-primary sm:text-3xl">
+                    {t.contactFormTitle}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-text-secondary sm:text-base">
+                    {t.contactFormDesc}
+                </p>
+            </div>
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {formFields.map(({ name, label, placeholder, type, autoComplete, required }) => (
                     <div key={name}>
-                        <label htmlFor={name} className={labelClass}>{t[label]}</label>
+                        <label htmlFor={name} className={labelClass}>
+                            {t[label]} {required && <span className="text-brand">*</span>}
+                        </label>
                         <input
                             id={name}
                             name={name}
@@ -78,7 +81,9 @@ const ContactForm = () => {
                 ))}
 
                 <div className="sm:col-span-2">
-                    <label htmlFor="service" className={labelClass}>{t.contactServiceLabel}</label>
+                    <label htmlFor="service" className={labelClass}>
+                        {t.contactServiceLabel} <span className="text-brand">*</span>
+                    </label>
                     <div className="relative">
                         <select
                             id="service"
@@ -87,9 +92,13 @@ const ContactForm = () => {
                             defaultValue=""
                             className={`${fieldClass} appearance-none pr-12`}
                         >
-                            <option value="" disabled>{t.contactServicePh}</option>
+                            <option value="" disabled>
+                                {t.contactServicePh}
+                            </option>
                             {serviceOptions.map((key) => (
-                                <option key={key} value={key}>{t[key]}</option>
+                                <option key={key} value={key}>
+                                    {t[key]}
+                                </option>
                             ))}
                         </select>
                         <FaChevronDown
@@ -100,7 +109,9 @@ const ContactForm = () => {
                 </div>
 
                 <div className="sm:col-span-2">
-                    <label htmlFor="message" className={labelClass}>{t.contactDetailsLabel}</label>
+                    <label htmlFor="message" className={labelClass}>
+                        {t.contactDetailsLabel} <span className="text-brand">*</span>
+                    </label>
                     <textarea
                         id="message"
                         name="message"
@@ -112,25 +123,27 @@ const ContactForm = () => {
                 </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-5">
+            <div className="mt-8 flex flex-wrap items-center gap-5 border-t border-border/80 pt-6">
                 <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-sm font-semibold text-brand-foreground shadow-lg transition-colors hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-60"
+                    className="inline-flex items-center gap-2.5 rounded-xl bg-brand px-8 py-4 text-sm font-bold text-brand-foreground shadow-lg shadow-brand/20 transition-all hover:bg-brand-hover hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                    {status === "sending" ? t.contactSending : t.contactSend}
-                    <FaPaperPlane size={13} />
+                    <span>{status === "sending" ? t.contactSending : t.contactSend}</span>
+                    <FaPaperPlane size={12} />
                 </button>
 
                 {status === "success" && (
-                    <p role="status" className="text-sm font-semibold text-green-500">
-                        {t.contactSuccess}
-                    </p>
+                    <div role="status" className="flex items-center gap-2 text-sm font-semibold text-emerald-500">
+                        <FaCircleCheck size={16} />
+                        <span>{t.contactSuccess}</span>
+                    </div>
                 )}
                 {status === "error" && (
-                    <p role="alert" className="text-sm font-semibold text-red-500">
-                        {t.contactError}
-                    </p>
+                    <div role="alert" className="flex items-center gap-2 text-sm font-semibold text-rose-500">
+                        <FaTriangleExclamation size={16} />
+                        <span>{t.contactError}</span>
+                    </div>
                 )}
             </div>
         </form>

@@ -6,18 +6,19 @@ import TeamPackages from "@/component/team/TeamPackages";
 import TeamWhy from "@/component/team/TeamWhy";
 import type { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-    title: "Our Team | NetByte IT",
+    title: "Our Team | NextByte IT",
 };
 
 const TeamPage = () => (
     <DotBackground>
-        <TeamLeadership />
-        <TeamCapabilities />
-        <TeamPackages />
-        <TeamAddons />
-        <TeamWhy />
+        <main>
+            <TeamLeadership />
+            <TeamCapabilities />
+            <TeamPackages />
+            <TeamAddons />
+            <TeamWhy />
+        </main>
     </DotBackground>
 );
 

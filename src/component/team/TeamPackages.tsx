@@ -9,7 +9,7 @@ import PackageCard from "./PackageCard";
 import SectionHeading from "./SectionHeading";
 
 const selectClass =
-    "w-full appearance-none rounded-2xl border border-border bg-surface-secondary px-5 py-4 pr-12 text-sm font-semibold text-text-primary outline-none transition-colors focus:border-brand";
+    "w-full appearance-none rounded-2xl border border-border bg-surface px-5 py-3.5 pr-12 text-sm font-semibold text-text-primary outline-none transition-all focus:border-brand focus:ring-2 focus:ring-brand/20";
 
 const TeamPackages = () => {
     const { t } = useApp();
@@ -19,7 +19,6 @@ const TeamPackages = () => {
     const main = pricing.find((m) => m.id === mainId) ?? pricing[0];
     const sub = main.subs.find((s) => s.id === subId) ?? main.subs[0];
 
-    // Switching the main service resets the sub-category to its first option
     const changeMain = (id: string) => {
         setMainId(id);
         setSubId(pricing.find((m) => m.id === id)?.subs[0].id ?? "");
@@ -61,7 +60,9 @@ const TeamPackages = () => {
                                     className={selectClass}
                                 >
                                     {options.map((o) => (
-                                        <option key={o.id} value={o.id}>{o.label}</option>
+                                        <option key={o.id} value={o.id}>
+                                            {o.label}
+                                        </option>
                                     ))}
                                 </select>
                                 <FaChevronDown
@@ -73,19 +74,19 @@ const TeamPackages = () => {
                     ))}
                 </div>
 
-                {/* key remounts the block so it re-animates when the sub-category changes */}
                 <motion.div
                     key={sub.id}
                     initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
                 >
                     <div className="mx-auto mt-14 max-w-2xl text-center">
-                        <h3 className="text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl">
+                        <h3 className="text-2xl font-black tracking-tight text-text-primary sm:text-4xl">
                             {t[sub.title]}
                         </h3>
-                        <p className="mt-3 text-text-secondary">{t[sub.desc]}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                            {t[sub.desc]}
+                        </p>
                     </div>
 
                     <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-3">

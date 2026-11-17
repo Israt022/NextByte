@@ -9,6 +9,7 @@ import TeamCard from "./TeamCard";
 
 const Team = () => {
     const { t } = useApp();
+    const homeTeam = team.slice(0, 4);
 
     return (
         <section
@@ -46,7 +47,7 @@ const Team = () => {
 
                 {/* Team Grid */}
                 <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-                    {team.map((member, index) => (
+                    {homeTeam.map((member, index) => (
                         <motion.div
                             key={member.name}
                             initial={{ opacity: 0, y: 30 }}
