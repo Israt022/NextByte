@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 
-// Shared page background: plain, modern, and professional architectural backdrop.
-// Wraps inner pages (Projects, Contact, Team, etc.) with a clean structural aesthetic.
+// Shared page background: plain, modern, and professional studio backdrop.
+// Completely avoids AI clichés (zero dots, zero grid/box patterns).
+// Wraps inner pages (Projects, Contact, Team, etc.) with a clean architectural aesthetic.
 interface DotBackgroundProps {
     children: ReactNode;
     className?: string;
@@ -11,23 +12,17 @@ const DotBackground = ({
     children,
     className = "",
 }: DotBackgroundProps) => (
-    <div className={`theme-transition relative min-h-screen overflow-hidden bg-background ${className}`}>
+    <div className={`theme-transition relative min-h-screen w-full overflow-x-hidden bg-background ${className}`}>
         {/* Subtle Top Gradient Wash */}
         <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-gradient-to-b from-surface-secondary/70 via-surface-secondary/25 to-transparent"
+            className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-surface-secondary/70 via-surface-secondary/20 to-transparent"
         />
 
         {/* Soft Ambient Brand Center Sheen */}
         <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-40 left-1/2 h-[360px] w-[720px] -translate-x-1/2 rounded-full bg-brand/[0.04] blur-[110px] dark:bg-brand/[0.03]"
-        />
-
-        {/* Minimal Architectural Hairline Grid with Radial Fade */}
-        <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-[620px] text-text-primary opacity-[0.03] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black_50%,transparent_100%)] dark:opacity-[0.045]"
+            className="pointer-events-none absolute -top-40 left-1/2 h-[380px] w-[760px] -translate-x-1/2 rounded-[100%] bg-brand/[0.045] blur-[120px] dark:bg-brand/[0.035]"
         />
 
         {/* Top Horizon Hairline Accent */}
@@ -37,7 +32,7 @@ const DotBackground = ({
         />
 
         {/* Page Content */}
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10 w-full">{children}</div>
     </div>
 );
 
