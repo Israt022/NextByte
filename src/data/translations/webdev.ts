@@ -1,5 +1,4 @@
 export const webDevEn = {
-    // Breadcrumbs & Hero
     webDevBreadcrumbHome: "Home",
     webDevBreadcrumbServices: "Services",
     webDevBreadcrumbCurrent: "Web Development",
@@ -14,7 +13,6 @@ export const webDevEn = {
     webDevStatSpeed: "< 0.8s Avg Load",
     webDevStatScore: "100/100 Lighthouse",
 
-    // Capabilities Section (Custom section)
     webDevCapTag: "What We Engineer",
     webDevCapTitle: "Modern Web Engineering for Fast-Growing Brands",
     webDevCapDesc:
@@ -28,13 +26,11 @@ export const webDevEn = {
     webDevCap4Title: "API & Cloud Microservices",
     webDevCap4Desc: "Secure RESTful and GraphQL backend APIs, serverless functions, database optimization, and cloud infrastructure.",
 
-    // Tree Workflow Section
     webDevTreeTag: "Tree-Structured Lifecycle",
     webDevTreeTitle: "Our Structured Development Tree",
     webDevTreeDesc:
         "A clear, branching engineering workflow where strategic discovery branches into parallel design and code tracks, converging into high-impact deployment.",
-    
-    // Tree Nodes
+
     treeRootTitle: "Root: Strategic Architecture",
     treeRootDesc: "Technical discovery, architecture blueprinting, database schema design, and core scope alignment.",
     treeBranch1Title: "Branch A: Experience & UI Design",
@@ -50,7 +46,6 @@ export const webDevEn = {
 };
 
 export const webDevBn: typeof webDevEn = {
-    // Breadcrumbs & Hero
     webDevBreadcrumbHome: "হোম",
     webDevBreadcrumbServices: "সেবাসমূহ",
     webDevBreadcrumbCurrent: "ওয়েব ডেভেলপমেন্ট",
@@ -65,7 +60,6 @@ export const webDevBn: typeof webDevEn = {
     webDevStatSpeed: "< ০.৮ সে. গড় লোড",
     webDevStatScore: "১০০/১০০ লাইটহাউস",
 
-    // Capabilities Section (Custom section)
     webDevCapTag: "আমরা যা তৈরি করি",
     webDevCapTitle: "ক্রমবর্ধমান ব্র্যান্ডের জন্য আধুনিক ওয়েব ইঞ্জিনিয়ারিং",
     webDevCapDesc:
@@ -79,13 +73,11 @@ export const webDevBn: typeof webDevEn = {
     webDevCap4Title: "API ও ক্লাউড মাইক্রোসার্ভিস",
     webDevCap4Desc: "নিরাপদ RESTful ও GraphQL ব্যাকএন্ড API, সার্ভারলেস ফাংশন, ডেটাবেস অপটিমাইজেশন এবং ক্লাউড অবকাঠামো।",
 
-    // Tree Workflow Section
     webDevTreeTag: "ট্রি-স্ট্রাকচার্ড লাইফসাইকেল",
     webDevTreeTitle: "আমাদের সুগঠিত ডেভেলপমেন্ট ট্রি",
     webDevTreeDesc:
         "একটি স্পষ্ট, শাখাভিত্তিক ইঞ্জিনিয়ারিং ওয়ার্কফ্লো—যেখানে মূল স্ট্র্যাটেজি থেকে সমান্তরাল ডিজাইন ও কোডিং শাখা তৈরি হয় এবং সফল ডিপ্লয়মেন্টে গিয়ে মিলিত হয়।",
 
-    // Tree Nodes
     treeRootTitle: "মূল কান্ড: স্ট্র্যাটেজিক আর্কিটেকচার",
     treeRootDesc: "টেকনিক্যাল রিকোয়ারমেন্ট অ্যানালাইসিস, আর্কিটেকচার ব্লুপ্রিন্ট, ডেটাবেস স্কিমা ডিজাইন ও প্রজেক্ট রোডম্যাপ।",
     treeBranch1Title: "শাখা ১: ইউজার এক্সপেরিয়েন্স ও ইউআই",

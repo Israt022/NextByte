@@ -135,7 +135,7 @@ const WebDevHero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Right Column: Code & Architecture Showcase Frame (5 Cols) */}
+                    {/* Right Column*/}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
