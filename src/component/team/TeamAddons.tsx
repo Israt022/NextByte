@@ -28,9 +28,9 @@ const TeamAddons = () => {
     return (
         <section
             id="addons"
-            className="theme-transition scroll-mt-[76px] px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28"
+            className="theme-transition scroll-mt-[76px] pb-20 lg:pb-28"
         >
-            <div className="mx-auto max-w-[1440px]">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
                 <SectionHeading tag={t.addonTag} title={t.addonTitle} desc={t.addonDesc} />
 
                 <motion.div

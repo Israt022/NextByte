@@ -12,7 +12,7 @@ const WebDevBackground = ({
     children,
     className = "",
 }: WebDevBackgroundProps) => (
-    <div className={`theme-transition relative min-h-screen overflow-hidden bg-background ${className}`}>
+    <div className={`theme-transition relative min-h-screen w-full overflow-x-hidden bg-background ${className}`}>
         {/* Top Dual Radial Ambient Auras */}
         <div
             aria-hidden="true"
@@ -36,7 +36,7 @@ const WebDevBackground = ({
         />
 
         {/* Content */}
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10 w-full">{children}</div>
     </div>
 );
 

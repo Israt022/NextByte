@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const WebDevelopmentPage = () => {
     return (
         <WebDevBackground>
-            <main>
+            <main className="w-full">
                 <WebDevHero />
                 <WebDevCapabilities />
                 <WebDevTreeWorkflow />

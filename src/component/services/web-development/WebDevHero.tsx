@@ -18,8 +18,8 @@ const WebDevHero = () => {
     const { t } = useApp();
 
     return (
-        <section className="relative px-5 pt-20 sm:px-8 lg:px-12 lg:pt-28">
-            <div className="mx-auto max-w-[1440px]">
+        <section className="relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-28">
+            <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
                 {/* Breadcrumb Navigation */}
                 <motion.nav
                     initial={{ opacity: 0, y: 15 }}
@@ -65,7 +65,7 @@ const WebDevHero = () => {
                         </div>
 
                         {/* Main Title */}
-                        <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-text-primary sm:text-6xl lg:text-6xl xl:text-7xl lg:leading-[1.1]">
+                        <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-text-primary sm:text-5xl lg:text-6xl lg:leading-[1.15]">
                             {t.webDevHeroTitle}{" "}
                             <span className="relative inline-block rounded-2xl bg-brand px-3.5 py-1 text-brand-foreground shadow-md">
                                 {t.webDevHeroHighlight}

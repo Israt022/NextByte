@@ -57,8 +57,8 @@ const WebDevCapabilities = () => {
     ];
 
     return (
-        <section className="relative px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-            <div className="mx-auto max-w-[1440px]">
+        <section className="relative py-20 lg:py-28">
+            <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
                 {/* Section Header */}
                 <motion.header
                     initial={{ opacity: 0, y: 30 }}

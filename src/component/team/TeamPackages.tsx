@@ -42,9 +42,9 @@ const TeamPackages = () => {
     return (
         <section
             id="packages"
-            className="theme-transition scroll-mt-[76px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+            className="theme-transition scroll-mt-[76px] py-20 lg:py-28"
         >
-            <div className="mx-auto max-w-[1440px]">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
                 <SectionHeading tag={t.pkgTag} title={t.pkgTitle} desc={t.pkgDesc} />
 
                 <div className="mx-auto mt-12 grid max-w-3xl gap-4 sm:grid-cols-2">
