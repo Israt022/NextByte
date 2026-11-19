@@ -19,7 +19,6 @@ export const navItems: NavItemData[] = [
             { key: "webDev", href: "/services/web-development" },
             { key: "appDev", href: "/services/app-development" },
             { key: "uiux", href: "/services/ui-ux" },
-            { key: "itSupport", href: "/services/pport" },
         ],
     },
     {
