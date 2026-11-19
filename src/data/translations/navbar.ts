@@ -11,7 +11,6 @@ export const navbarEn = {
     webDev: "Web Development",
     appDev: "App Development",
     uiux: "UI/UX Design",
-    itSupport: "IT Support & Networking",
 
     // Pricing dropdown
     websitePlans: "Website Packages",
