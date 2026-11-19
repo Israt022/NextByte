@@ -133,7 +133,7 @@ export const capabilities: Capability[] = [
     { title: "fsSeo", desc: "svcSeoDesc", icon: FaMagnifyingGlass, href: "/services/seo" },
     { title: "fsEcom", desc: "svcEcomDesc", icon: FaCartShopping, href: "/services/ecommerce" },
     { title: "fsApp", desc: "capAppDesc", icon: FaMobileScreenButton, href: "/services/app-development" },
-    { title: "fsUiux", desc: "capUiuxDesc", icon: FaPalette, href: "/services/ui-ux-design" },
+    { title: "fsUiux", desc: "capUiuxDesc", icon: FaPalette, href: "/services/ui-ux" },
 ];
 
 // /team page: why us items

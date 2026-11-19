@@ -18,7 +18,7 @@ export const navItems: NavItemData[] = [
         children: [
             { key: "webDev", href: "/services/web-development" },
             { key: "appDev", href: "/services/app-development" },
-            { key: "uiux", href: "/services/ui-ux-design" },
+            { key: "uiux", href: "/services/ui-ux" },
             { key: "itSupport", href: "/services/it-support" },
         ],
     },
